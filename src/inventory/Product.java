@@ -1,11 +1,18 @@
 package inventory;
 
 public class Product {
-    private String product_id;
+    private String product_id;//ID is auto generated in the database
     private String product_name;
     private double price;
-    private int category;
+    private String category;
     private int stock;
+
+    public Product(String product_name, double price, String category, int stock) {
+        this.product_name = product_name;
+        this.price = price;
+        this.category = category;
+        this.stock = stock;
+    }
 
     public String getProduct_id() {
         return product_id;
@@ -31,11 +38,11 @@ public class Product {
         this.price = price;
     }
 
-    public int getCategory() {
+    public String getCategory() {
         return category;
     }
 
-    public void setCategory(int category) {
+    public void setCategory(String category) {
         this.category = category;
     }
 
